@@ -1,0 +1,234 @@
+//imports
+@import "variable.less";
+@import "mixins.less";
+
+//Resert total da pagina 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+  }
+  
+
+body {
+    max-width:~"@{tamMaxTela}px";
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #cores[fundo];
+  }
+
+  header{
+    .All_center();
+    background-color:#cores[fundo_header];
+    border-radius: 15px 15px 0px 0px;
+    height: 10vh;
+    border: 5px solid #cores[border_page];
+    color:#cores[letter_header];
+  }
+
+  main{
+    .All_center();
+    width: 100%;
+    height: 80vh;
+    border:5px solid #cores[border_page];
+    border-top:none;
+  }
+  .camp_jogo{
+    .All_center();
+    background-color: #cores[fundo_camp];
+    border: 5px solid #cores[border_camp];
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+  }
+
+  .camp_jogo form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .camp_jogo form input{
+     border-radius: 5px;
+     border: none;
+     height: 30%;
+     width: fit-content;
+     min-width: 25%;
+     max-width: 100%;
+     text-align: center;
+     font-size: 2em;
+     box-sizing: border-box;
+     width: -moz-fit-content;
+     width: fit-content;
+     cursor: pointer;
+  }
+  /* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#res{ 
+  display:flex;
+  background-color: #cores[p_res];
+  border-radius: 5px;
+  padding: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.configuracoes{
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+}
+.configuracoes h2{
+  margin: 15px;
+}
+.configuracoes form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.configuracoes form input{
+     border-radius: 5px;
+     border: none;
+     width: fit-content;
+     width: 25%;
+     text-align: center;
+     font-size: 1.2em;
+     box-sizing: border-box;
+     margin: 5px;
+     cursor: pointer;
+}
+
+.configuracoes form button{
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  color:#cores[letter_button];
+}
+
+#btn_iniciar{
+  background-color:#cores[fund_btniniciar];
+}
+
+#btn_iniciar:hover{
+  background-color: #cores[hover_btniniciar];
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  border:2px solid #cores[fund_btniniciar] ;
+}
+
+#btn_resert{
+  background-color: #cores[fund_btnresert];
+}
+
+#btn_resert:hover{
+  background-color:#cores[hover_btnresert];
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  border:2px solid #cores[fund_btnresert] ;
+}
+
+footer{
+  .All_center();
+  background-color:#cores[fundo_header];
+  border-radius: 0px 0px 15px 15px;
+  height: 10vh;
+  border: 5px solid #cores[border_page];
+  border-top: none;
+  color:#cores[letter_footer];
+  a {
+    color:#fff;         /* cor padrão do link */
+    text-decoration: none; /* remove o sublinhado */
+  }
+  a:hover {
+    color: red;            /* quando passa o mouse */
+    text-decoration: underline; /* pode voltar o sublinhado se quiser */
+  }
+  a:visited {
+    color: purple;         /* quando o link já foi visitado */
+  }
+  a:active {
+    color: green;          /* quando o link está sendo clicado */
+  }
+}
+
+@media screen and (max-width: 1023px){
+
+}
+
+  @media screen and (max-width: 767px) {
+     .camp_jogo{
+      width: 90%;
+      height: 50vh;
+      margin: 0;
+     }
+    
+.configuracoes{
+  height: 40%;
+  display: flex;
+  box-sizing: border-box;
+    h2{
+      margin-top: -10px;
+    }
+  p{
+    margin-top: -20px;
+  }
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+    align-items: center;   
+    margin-bottom:15px; 
+  //  border: 1px solid;
+    input{
+    
+      border: none;
+      width: 25%;
+      text-align: center;
+      font-size: 1.2em;
+      box-sizing: border-box;
+      margin: 5px;
+      cursor: pointer;    
+     }
+
+    }
+   }
+   footer {
+    font-size: 12px;
+  }
+  }
+
